@@ -17,6 +17,7 @@ object frMain: TfrMain
     Anchors = [akTop, akLeft, akBottom]
     ScrollBars = ssBoth
     TabOrder = 0
+    WordWrap = False
   end
   object mOutput: TMemo
     Left = 648
@@ -26,6 +27,7 @@ object frMain: TfrMain
     Anchors = [akTop, akLeft, akRight, akBottom]
     ScrollBars = ssBoth
     TabOrder = 1
+    WordWrap = False
   end
   object edDDL: TEdit
     Left = 8
