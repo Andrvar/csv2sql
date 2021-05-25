@@ -1,0 +1,109 @@
+object frMain: TfrMain
+  Left = 362
+  Height = 762
+  Top = 102
+  Width = 1123
+  Caption = 'csv2sql v0.0'
+  ClientHeight = 762
+  ClientWidth = 1123
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.0.10.0'
+  object mInput: TMemo
+    Left = 216
+    Height = 736
+    Top = 18
+    Width = 422
+    Anchors = [akTop, akLeft, akBottom]
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+  object mOutput: TMemo
+    Left = 648
+    Height = 736
+    Top = 18
+    Width = 472
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ScrollBars = ssBoth
+    TabOrder = 1
+  end
+  object edDDL: TEdit
+    Left = 8
+    Height = 21
+    Top = 48
+    Width = 200
+    TabOrder = 2
+    Text = 'insert into values'
+  end
+  object btStart: TButton
+    Left = 0
+    Height = 25
+    Top = 2
+    Width = 208
+    Caption = 'Пуск'
+    OnClick = btStartClick
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 13
+    Top = 32
+    Width = 85
+    Caption = 'Начало команды'
+    ParentColor = False
+  end
+  object sgTypes: TStringGrid
+    Left = 8
+    Height = 650
+    Top = 112
+    Width = 200
+    Anchors = [akTop, akLeft, akBottom]
+    ColCount = 2
+    Columns = <    
+      item
+        PickList.Strings = (
+          'varchar'
+          'number'
+          'date'
+        )
+        Title.Caption = 'Тип поля'
+        Width = 120
+      end>
+    DefaultColWidth = 48
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 31
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Left = 216
+    Height = 13
+    Top = 2
+    Width = 103
+    Caption = 'CSV (разделитель ;)'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 648
+    Height = 13
+    Top = 2
+    Width = 19
+    Caption = 'SQL'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 13
+    Top = 88
+    Width = 83
+    Caption = 'Маска для даты'
+    ParentColor = False
+  end
+  object edMask: TEdit
+    Left = 96
+    Height = 21
+    Top = 80
+    Width = 112
+    TabOrder = 5
+    Text = 'dd.mm.yyyy'
+  end
+end
