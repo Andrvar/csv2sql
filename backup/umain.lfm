@@ -1,109 +1,158 @@
 object frMain: TfrMain
-  Left = 362
+  Left = 947
   Height = 762
-  Top = 102
+  Top = 167
   Width = 1123
   Caption = 'csv2sql v0.0'
   ClientHeight = 762
   ClientWidth = 1123
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  Position = poScreenCenter
   LCLVersion = '2.0.10.0'
-  object mInput: TMemo
-    Left = 216
-    Height = 736
-    Top = 18
-    Width = 422
-    Anchors = [akTop, akLeft, akBottom]
-    ScrollBars = ssBoth
-    TabOrder = 0
-  end
-  object mOutput: TMemo
-    Left = 648
-    Height = 736
-    Top = 18
-    Width = 472
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    ScrollBars = ssBoth
-    TabOrder = 1
-  end
-  object edDDL: TEdit
-    Left = 8
-    Height = 21
-    Top = 48
-    Width = 200
-    TabOrder = 2
-    Text = 'insert into values'
-  end
-  object btStart: TButton
+  object Panel1: TPanel
     Left = 0
-    Height = 25
-    Top = 2
-    Width = 208
-    Caption = 'Пуск'
-    OnClick = btStartClick
-    TabOrder = 3
+    Height = 762
+    Top = 0
+    Width = 216
+    Align = alLeft
+    ClientHeight = 762
+    ClientWidth = 216
+    TabOrder = 0
+    object btStart: TButton
+      Left = 4
+      Height = 25
+      Top = 2
+      Width = 208
+      Caption = 'Пуск'
+      OnClick = btStartClick
+      TabOrder = 0
+    end
+    object edMask: TEdit
+      Left = 96
+      Height = 21
+      Top = 32
+      Width = 112
+      TabOrder = 1
+      Text = 'dd.mm.yyyy'
+    end
+    object Label4: TLabel
+      Left = 8
+      Height = 13
+      Top = 40
+      Width = 83
+      Caption = 'Маска для даты'
+      ParentColor = False
+    end
+    object sgTypes: TStringGrid
+      Left = 8
+      Height = 664
+      Top = 96
+      Width = 208
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = clSilver
+      ColCount = 3
+      Columns = <      
+        item
+          PickList.Strings = (
+            'varchar'
+            'number'
+            'date'
+          )
+          Title.Caption = 'Тип поля'
+          Width = 70
+        end      
+        item
+          Title.Caption = 'Значение'
+          Width = 100
+        end>
+      DefaultColWidth = 30
+      Font.Color = clBlack
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+      ParentFont = False
+      RowCount = 31
+      TabOrder = 2
+    end
+    object btGetType: TButton
+      Left = 4
+      Height = 25
+      Top = 64
+      Width = 208
+      Caption = 'Подобрать типы по 1-ой строке'
+      OnClick = btGetTypeClick
+      TabOrder = 3
+    end
   end
-  object Label1: TLabel
-    Left = 8
-    Height = 13
-    Top = 32
-    Width = 85
-    Caption = 'Начало команды'
-    ParentColor = False
+  object Panel2: TPanel
+    Left = 221
+    Height = 762
+    Top = 0
+    Width = 486
+    Align = alClient
+    ClientHeight = 762
+    ClientWidth = 486
+    TabOrder = 1
+    object mInput: TMemo
+      Left = 0
+      Height = 738
+      Top = 24
+      Width = 484
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = clSilver
+      ScrollBars = ssBoth
+      TabOrder = 0
+      WordWrap = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 13
+      Top = 8
+      Width = 103
+      Caption = 'CSV (разделитель ;)'
+      ParentColor = False
+    end
   end
-  object sgTypes: TStringGrid
-    Left = 8
-    Height = 650
-    Top = 112
-    Width = 200
-    Anchors = [akTop, akLeft, akBottom]
-    ColCount = 2
-    Columns = <    
-      item
-        PickList.Strings = (
-          'varchar'
-          'number'
-          'date'
-        )
-        Title.Caption = 'Тип поля'
-        Width = 120
-      end>
-    DefaultColWidth = 48
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
-    RowCount = 31
-    TabOrder = 4
+  object Panel3: TPanel
+    Left = 712
+    Height = 762
+    Top = 0
+    Width = 411
+    Align = alRight
+    ClientHeight = 762
+    ClientWidth = 411
+    TabOrder = 2
+    object mOutput: TMemo
+      Left = 0
+      Height = 736
+      Top = 24
+      Width = 408
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = clSilver
+      ScrollBars = ssBoth
+      TabOrder = 0
+      WordWrap = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 13
+      Top = 8
+      Width = 19
+      Caption = 'SQL'
+      ParentColor = False
+    end
   end
-  object Label2: TLabel
+  object Splitter1: TSplitter
     Left = 216
-    Height = 13
-    Top = 2
-    Width = 103
-    Caption = 'CSV (разделитель ;)'
-    ParentColor = False
+    Height = 762
+    Top = 0
+    Width = 5
   end
-  object Label3: TLabel
-    Left = 648
-    Height = 13
-    Top = 2
-    Width = 19
-    Caption = 'SQL'
-    ParentColor = False
-  end
-  object Label4: TLabel
-    Left = 8
-    Height = 13
-    Top = 88
-    Width = 83
-    Caption = 'Маска для даты'
-    ParentColor = False
-  end
-  object edMask: TEdit
-    Left = 96
-    Height = 21
-    Top = 80
-    Width = 112
-    TabOrder = 5
-    Text = 'dd.mm.yyyy'
+  object Splitter2: TSplitter
+    Left = 707
+    Height = 762
+    Top = 0
+    Width = 5
+    Align = alRight
+    ResizeAnchor = akRight
   end
 end
