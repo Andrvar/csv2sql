@@ -40,7 +40,7 @@ type
 var
   frMain: TfrMain;
   Line: TStringList;
-  arTypes: array[1..30] of string;
+  arTypes: array[1..50] of string;
 
 implementation
 

@@ -1,9 +1,9 @@
 object frMain: TfrMain
-  Left = 947
+  Left = 944
   Height = 762
-  Top = 167
+  Top = 187
   Width = 1123
-  Caption = 'csv2sql v1.0'
+  Caption = 'csv2sql v1.1'
   ClientHeight = 762
   ClientWidth = 1123
   OnCreate = FormCreate
@@ -70,7 +70,7 @@ object frMain: TfrMain
       Font.Color = clBlack
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
       ParentFont = False
-      RowCount = 31
+      RowCount = 51
       TabOrder = 2
     end
     object btGetType: TButton
