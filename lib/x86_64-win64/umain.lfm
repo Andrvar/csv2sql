@@ -1,7 +1,7 @@
 object frMain: TfrMain
-  Left = 944
+  Left = 652
   Height = 762
-  Top = 187
+  Top = 145
   Width = 1123
   Caption = 'csv2sql v1.1'
   ClientHeight = 762
@@ -92,17 +92,6 @@ object frMain: TfrMain
     ClientHeight = 762
     ClientWidth = 486
     TabOrder = 1
-    object mInput: TMemo
-      Left = 0
-      Height = 738
-      Top = 24
-      Width = 484
-      Anchors = [akTop, akLeft, akRight, akBottom]
-      Color = clSilver
-      ScrollBars = ssBoth
-      TabOrder = 0
-      WordWrap = False
-    end
     object Label2: TLabel
       Left = 8
       Height = 13
@@ -110,6 +99,19 @@ object frMain: TfrMain
       Width = 103
       Caption = 'CSV (разделитель ;)'
       ParentColor = False
+    end
+    object mInput: TRichMemo
+      Left = 8
+      Height = 736
+      Top = 24
+      Width = 478
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = clSilver
+      HideSelection = False
+      ScrollBars = ssBoth
+      TabOrder = 0
+      WordWrap = False
+      ZoomFactor = 1
     end
   end
   object Panel3: TPanel
@@ -121,17 +123,6 @@ object frMain: TfrMain
     ClientHeight = 762
     ClientWidth = 411
     TabOrder = 2
-    object mOutput: TMemo
-      Left = 0
-      Height = 736
-      Top = 24
-      Width = 408
-      Anchors = [akTop, akLeft, akRight, akBottom]
-      Color = clSilver
-      ScrollBars = ssBoth
-      TabOrder = 0
-      WordWrap = False
-    end
     object Label3: TLabel
       Left = 8
       Height = 13
@@ -139,6 +130,19 @@ object frMain: TfrMain
       Width = 19
       Caption = 'SQL'
       ParentColor = False
+    end
+    object mOutput: TRichMemo
+      Left = 0
+      Height = 736
+      Top = 24
+      Width = 408
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = clSilver
+      HideSelection = False
+      ScrollBars = ssBoth
+      TabOrder = 0
+      WordWrap = False
+      ZoomFactor = 1
     end
   end
   object Splitter1: TSplitter

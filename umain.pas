@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Grids{, RegExpr};
+  Grids, RichMemo{, RegExpr};
 
 type
 
@@ -19,11 +19,11 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    mInput: TMemo;
-    mOutput: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    mInput: TRichMemo;
+    mOutput: TRichMemo;
     sgTypes: TStringGrid;
     Splitter1: TSplitter;
     Splitter2: TSplitter;
@@ -47,6 +47,7 @@ implementation
 {$R *.lfm}
 
 { TfrMain }
+
 
 procedure TfrMain.FormCreate(Sender: TObject);
 var
