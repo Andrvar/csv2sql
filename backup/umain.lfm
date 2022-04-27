@@ -3,7 +3,7 @@ object frMain: TfrMain
   Height = 762
   Top = 167
   Width = 1123
-  Caption = 'csv2sql v0.0'
+  Caption = 'csv2sql v1.0'
   ClientHeight = 762
   ClientWidth = 1123
   OnCreate = FormCreate
